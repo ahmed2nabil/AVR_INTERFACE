@@ -1,0 +1,60 @@
+18:07:54 **** Incremental Build of configuration Debug for project mychallenge ****
+make all 
+Building file: ../chall.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"chall.d" -MT"chall.o" -c -o "chall.o" "../chall.c"
+In file included from ../micro_config.h:19,
+                 from ../lcd.h:18,
+                 from ../chall.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../micro_config.h:19,
+                 from ../lcd.h:18,
+                 from ../chall.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../chall.c: In function 'main':
+../chall.c:17: warning: implicit declaration of function 'keypad_getPressedKey'
+../chall.c:18: warning: implicit declaration of function 'keyPad_getPressedKey'
+../chall.c:10: warning: unused variable 'key'
+Finished building: ../chall.c
+ 
+Building file: ../keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
+In file included from ../micro_config.h:19,
+                 from ../keypad.h:17,
+                 from ../keypad.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../micro_config.h:19,
+                 from ../keypad.h:17,
+                 from ../keypad.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../keypad.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../micro_config.h:19,
+                 from ../lcd.h:18,
+                 from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>."
+In file included from c:/winavr-20100110/lib/gcc/../../avr/include/avr/delay.h:37,
+                 from ../micro_config.h:19,
+                 from ../lcd.h:18,
+                 from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../lcd.c: In function 'LCD_intgerToString':
+../lcd.c:168: warning: implicit declaration of function 'itoa'
+Finished building: ../lcd.c
+ 
+Building target: mychallenge.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mychallenge.map -mmcu=atmega16 -o "mychallenge.elf"  ./chall.o ./keypad.o ./lcd.o   
+./chall.o: In function `main':
+../chall.c:17: undefined reference to `keypad_getPressedKey'
+../chall.c:18: undefined reference to `keyPad_getPressedKey'
+make: *** [mychallenge.elf] Error 1
+
+18:07:57 Build Failed. 3 errors, 10 warnings. (took 3s.184ms)
+

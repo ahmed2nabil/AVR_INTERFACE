@@ -1,0 +1,69 @@
+20:21:53 **** Build of configuration Debug for project EEPROM_I2C ****
+make all 
+Building file: ../External_EEPROM_I2C.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"External_EEPROM_I2C.d" -MT"External_EEPROM_I2C.d" -c -o "External_EEPROM_I2C.o" "../External_EEPROM_I2C.c"
+In file included from ../micro_config.h:22,
+                 from ../External_EEPROM_I2C.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../External_EEPROM_I2C.c
+ 
+Building file: ../external_eeprom.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"external_eeprom.d" -MT"external_eeprom.d" -c -o "external_eeprom.o" "../external_eeprom.c"
+In file included from ../micro_config.h:22,
+                 from ../i2c.h:17,
+                 from ../external_eeprom.c:12:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../external_eeprom.c
+ 
+Building file: ../i2c.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=8000000UL -MMD -MP -MF"i2c.d" -MT"i2c.d" -c -o "i2c.o" "../i2c.c"
+In file included from ../micro_config.h:22,
+                 from ../i2c.h:17,
+                 from ../i2c.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../i2c.c
+ 
+Building target: EEPROM_I2C.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,EEPROM_I2C.map -mmcu=atmega16 -o "EEPROM_I2C.elf"  ./External_EEPROM_I2C.o ./external_eeprom.o ./i2c.o   
+Finished building target: EEPROM_I2C.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S EEPROM_I2C.elf  >"EEPROM_I2C.lss"
+Finished building: EEPROM_I2C.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 EEPROM_I2C.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    3886 bytes (23.7% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+15:13:05 **** Build of configuration Debug for project EEPROM_I2C ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 EEPROM_I2C.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    3886 bytes (23.7% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

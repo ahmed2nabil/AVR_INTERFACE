@@ -1,0 +1,23 @@
+/*
+ * smart1.h
+ *
+ *  Created on: May 3, 2020
+ *      Author: 20114
+ */
+
+#ifndef SMART1_H_
+#define SMART1_H_
+
+#include"keypad.h"
+#include"lcd.h"
+#include"spi.h"
+
+#define pass_size 4
+#define Address_admin  0x0000
+#define Address_guest 0x0008
+#define Admin_set 0x0010
+#define guest_set 0x0018
+
+void set_password_admin(void);
+
+#endif /* SMART1_H_ */

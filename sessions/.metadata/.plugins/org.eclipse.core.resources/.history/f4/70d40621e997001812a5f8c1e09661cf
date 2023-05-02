@@ -1,0 +1,38 @@
+/*
+ * ex.c
+ *
+ *  Created on: Aug 4, 2018
+ *      Author: nobol billy
+ */
+
+#include<avr/io.h>
+#include<avr/interrupt.h>
+void int1(void){
+	MCUCR|=(1<<ISC10);
+	MCUCR&=~(1<<ISC11);
+	GICR|=(1<<INT1);
+	SREG|=(1<<7);
+}
+ISRC(INT1_VECT){
+	int i ;
+	for(i=0;i<5;i++){
+		PORTC=0xFF;
+		_delay_ms(300);
+		PORTC=0x00;
+		_delay_ms(300);
+	}
+}
+
+int main (){
+	int i;
+	DDRC =0xFF;
+	PORTC=0x01;
+	int1();
+	while(1){
+	_delay_ms(30);
+PORTC=(PORTC<<1);
+if(PORTC==0x00)
+PORTC=0x01;
+	}
+
+}

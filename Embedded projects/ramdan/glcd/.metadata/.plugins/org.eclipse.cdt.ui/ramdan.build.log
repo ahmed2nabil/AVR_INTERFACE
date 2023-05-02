@@ -1,0 +1,38 @@
+00:09:00 **** Incremental Build of configuration Debug for project ramdan ****
+make all 
+Building file: ../glcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"glcd.d" -MT"glcd.o" -c -o "glcd.o" "../glcd.c"
+../glcd.c:6:1: warning: "F_CPU" redefined
+<command-line>: warning: this is the location of the previous definition
+In file included from ../glcd.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../glcd.c
+ 
+Building target: ramdan.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ramdan.map -mmcu=atmega16 -o "ramdan.elf"  ./glcd.o   
+Finished building target: ramdan.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ramdan.elf  >"ramdan.lss"
+Finished building: ramdan.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 ramdan.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    7504 bytes (45.8% Full)
+(.text + .data + .bootloader)
+
+Data:        264 bytes (25.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+00:09:00 Build Finished. 0 errors, 2 warnings. (took 826ms)
+

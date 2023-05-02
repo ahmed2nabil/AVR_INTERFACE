@@ -1,0 +1,35 @@
+22:17:14 **** Incremental Build of configuration Debug for project temp_control ****
+make all 
+Building file: ../temp_control.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"temp_control.d" -MT"temp_control.o" -c -o "temp_control.o" "../temp_control.c"
+In file included from ../micro_config.h:22,
+                 from ../adc.h:16,
+                 from ../temp_control.c:9:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../temp_control.c
+ 
+Building target: temp_control.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,temp_control.map -mmcu=atmega16 -o "temp_control.elf"  ./adc.o ./lcd.o ./temp_control.o   
+Finished building target: temp_control.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S temp_control.elf  >"temp_control.lss"
+Finished building: temp_control.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 temp_control.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    7008 bytes (42.8% Full)
+(.text + .data + .bootloader)
+
+Data:        276 bytes (27.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

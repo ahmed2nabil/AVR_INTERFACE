@@ -1,0 +1,24 @@
+/*
+ * lcd.c
+ *
+ *  Created on: Feb 15, 2020
+ *      Author: 20114
+ */
+
+#include "lcd.h"
+
+/*******************************************************************************
+ *                      Functions Definitions                                  *
+ *******************************************************************************/
+
+void LCD_init (void){
+	LCD_DATA_PORT_DIR = 0xFF;
+	LCD_CTRL_PORT_DIR |= (1<<E) | (1<<RS) | (1<<RW);
+
+	LCD_sendCommand(TWO_LINE_LCD_Eight_BIT_MODE); /* use 2-line lcd + 8-bit Data Mode + 5*7 dot display Mode */
+
+	LCD_sendCommand(CURSOR_OFF); /* cursor off */
+
+	LCD_sendCommand(CLEAR_COMMAND); /* clear LCD at the beginning */
+
+}

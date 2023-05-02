@@ -1,0 +1,22 @@
+/*
+ * mychallenge2.c
+ *
+ *  Created on: Aug 10, 2018
+ *      Author: nobol billy
+ */
+#include<avr/io.h>
+
+
+void timer0_init_PWM(unsigned char duty_cycle){
+	TCCR0 = (1<<WGM01) | (1<<WGM00) | (1<<COM00) | (1<<COM01) |(1<<CS01);
+TCNT0 =0 ;
+OCR0 = duty_cycle;
+DDRD |= (1<<PB3);
+}
+int main(){
+timer0_init_PWM(128);
+
+	while(1){
+
+	}
+}

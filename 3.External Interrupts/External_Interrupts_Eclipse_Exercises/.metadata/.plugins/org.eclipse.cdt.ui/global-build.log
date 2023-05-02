@@ -1,0 +1,35 @@
+18:03:44 **** Incremental Build of configuration Debug for project mychallenge ****
+make all 
+Building file: ../mychallege.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"mychallege.d" -MT"mychallege.o" -c -o "mychallege.o" "../mychallege.c"
+Finished building: ../mychallege.c
+ 
+Building target: mychallenge.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,mychallenge.map -mmcu=atmega16 -o "mychallenge.elf"  ./mychallege.o   
+Finished building target: mychallenge.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S mychallenge.elf  >"mychallenge.lss"
+Finished building: mychallenge.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex mychallenge.elf  "mychallenge.hex"
+Finished building: mychallenge.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 mychallenge.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     568 bytes (3.5% Full)
+(.text + .data + .bootloader)
+
+Data:          1 bytes (0.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

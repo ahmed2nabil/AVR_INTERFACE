@@ -1,0 +1,15 @@
+12:37:32 **** Build of configuration Debug for project exercise 1 ****
+make all 
+Building file: ../keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
+Finished building: ../keypad.c
+ 
+Building target: exercise 1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,exercise 1.map -mmcu=atmega16 -o "exercise 1.elf"  ./keypad.o   
+avr-gcc.exe: 1.map: No such file or directory
+make: *** [exercise 1.elf] Error 1
+
+12:37:33 Build Failed. 1 errors, 0 warnings. (took 587ms)
+

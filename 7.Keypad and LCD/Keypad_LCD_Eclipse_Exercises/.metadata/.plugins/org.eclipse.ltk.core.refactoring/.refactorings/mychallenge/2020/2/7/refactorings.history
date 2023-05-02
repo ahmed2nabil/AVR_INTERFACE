@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;std_types.h&apos; to &apos;mychallenge&apos;" description="Move &apos;std_types.h&apos; to &apos;mychallenge&apos;" destination="/mychallenge" element1="/RemoteSystemsTempFiles/std_types.h" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1581777959825" updateReferences="true"/>
+</session>

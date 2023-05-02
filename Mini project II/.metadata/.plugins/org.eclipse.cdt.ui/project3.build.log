@@ -1,0 +1,34 @@
+15:22:10 **** Incremental Build of configuration Debug for project project3 ****
+make all 
+Building file: ../prj.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"prj.d" -MT"prj.o" -c -o "prj.o" "../prj.c"
+Finished building: ../prj.c
+ 
+Building target: project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,project3.map -mmcu=atmega16 -o "project3.elf"  ./prj.o   
+Finished building target: project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S project3.elf  >"project3.lss"
+Finished building: project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 project3.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     240 bytes (1.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:22:12 Build Finished. 0 errors, 0 warnings. (took 1s.212ms)
+

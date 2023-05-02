@@ -1,0 +1,42 @@
+23:00:51 **** Incremental Build of configuration Debug for project smart_home ****
+make all 
+Building file: ../smart_home.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"smart_home.d" -MT"smart_home.o" -c -o "smart_home.o" "../smart_home.c"
+In file included from ../micro_config.h:22,
+                 from ../keypad.h:17,
+                 from ../smart1.h:11,
+                 from ../smart_home.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../smart_home.c: In function 'main':
+../smart_home.c:30: warning: passing argument 1 of 'LCD_displayCharacter' makes integer from pointer without a cast
+../smart_home.c: In function 'guest_check_password':
+../smart_home.c:58: warning: comparison between pointer and integer
+../smart_home.c: In function 'admin_check_password':
+../smart_home.c:80: warning: comparison between pointer and integer
+Finished building: ../smart_home.c
+ 
+Building target: smart_home.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,smart_home.map -mmcu=atmega16 -o "smart_home.elf"  ./keypad.o ./lcd.o ./smart_home.o ./spi.o   
+Finished building target: smart_home.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S smart_home.elf  >"smart_home.lss"
+Finished building: smart_home.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 smart_home.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    9008 bytes (55.0% Full)
+(.text + .data + .bootloader)
+
+Data:         99 bytes (9.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

@@ -1,0 +1,17 @@
+/*
+ * chall.c
+ *
+ *  Created on: Feb 15, 2020
+ *      Author: 20114
+ */
+#include"lcd.h"
+#include "keypad.h"
+int main () {
+LCD_init();
+	while(1){
+if (keypad_getPressedKey()){
+	uint8 temp= keyPad_getPressedKey();
+	LCD_displayCharacter();
+}
+	}
+}

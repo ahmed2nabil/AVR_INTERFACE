@@ -1,0 +1,9 @@
+13:18:58 **** Build of configuration Debug for project Exercise4 ****
+make all 
+Building file: ../Exercise4.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Exercise4.d" -MT"Exercise4.o" -c -o "Exercise4.o" "../Exercise4.c"
+make: *** [Exercise4.o] Error -1073741502
+
+13:19:04 Build Failed. 1 errors, 0 warnings. (took 5s.536ms)
+

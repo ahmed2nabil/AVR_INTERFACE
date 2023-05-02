@@ -1,0 +1,34 @@
+17:20:43 **** Build of configuration Debug for project Exercise6 ****
+make all 
+Building file: ../Exercise6.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Exercise6.d" -MT"Exercise6.d" -c -o "Exercise6.o" "../Exercise6.c"
+Finished building: ../Exercise6.c
+ 
+Building target: Exercise6.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Exercise6.map -mmcu=atmega16 -o "Exercise6.elf"  ./Exercise6.o   
+Finished building target: Exercise6.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Exercise6.elf  >"Exercise6.lss"
+Finished building: Exercise6.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Exercise6.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     362 bytes (2.2% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:20:44 Build Finished (took 533ms)
+

@@ -1,0 +1,11 @@
+16:40:08 **** Build of configuration Debug for project MyChallange1 ****
+make all 
+Building file: ../challange.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"challange.d" -MT"challange.o" -c -o "challange.o" "../challange.c"
+AllocationBase 0x0, BaseAddress 0x71540000, RegionSize 0x3F0000, State 0x10000
+C:\WinAVR-20100110\utils\bin\sh.exe: *** Couldn't reserve space for cygwin's heap, Win32 error 0
+make: *** [challange.o] Error 1
+
+16:40:09 Build Failed. 1 errors, 0 warnings. (took 1s.541ms)
+

@@ -1,0 +1,36 @@
+17:35:59 **** Incremental Build of configuration Debug for project ftufu ****
+make all 
+Building file: ../lll.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"lll.d" -MT"lll.o" -c -o "lll.o" "../lll.c"
+In file included from ../lll.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../lll.c
+ 
+Building target: ftufu.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ftufu.map -mmcu=atmega16 -o "ftufu.elf"  ./lll.o   
+Finished building target: ftufu.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S ftufu.elf  >"ftufu.lss"
+Finished building: ftufu.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 ftufu.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    3736 bytes (22.8% Full)
+(.text + .data + .bootloader)
+
+Data:          8 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:36:01 Build Finished. 0 errors, 1 warnings. (took 2s.23ms)
+

@@ -1,0 +1,38 @@
+23:53:15 **** Incremental Build of configuration Debug for project Door_lock ****
+make all 
+Building file: ../door_lock.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"door_lock.d" -MT"door_lock.o" -c -o "door_lock.o" "../door_lock.c"
+In file included from ../micro_config.h:22,
+                 from ../keypad.h:17,
+                 from ../door_lock.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../door_lock.c
+ 
+Building target: Door_lock.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Door_lock.map -mmcu=atmega16 -o "Door_lock.elf"  ./door_lock.o ./keypad.o ./lcd.o   
+Finished building target: Door_lock.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Door_lock.elf  >"Door_lock.lss"
+Finished building: Door_lock.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Door_lock.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    7906 bytes (48.3% Full)
+(.text + .data + .bootloader)
+
+Data:        122 bytes (11.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+23:53:18 Build Finished. 0 errors, 1 warnings. (took 2s.392ms)
+

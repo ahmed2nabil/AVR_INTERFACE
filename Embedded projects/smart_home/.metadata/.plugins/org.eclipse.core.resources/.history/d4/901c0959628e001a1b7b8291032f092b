@@ -1,0 +1,18 @@
+/*
+ * internal_eeprom.h
+ *
+ *  Created on: May 5, 2020
+ *      Author: Ahmed Nabil
+ */
+
+#ifndef INTERNAL_EEPROM_H_
+#define INTERNAL_EEPROM_H_
+
+#include "std_types.h"
+#include "micro_config.h"
+#include "common_macros.h"
+
+
+void read_byte(const)
+
+#endif /* INTERNAL_EEPROM_H_ */

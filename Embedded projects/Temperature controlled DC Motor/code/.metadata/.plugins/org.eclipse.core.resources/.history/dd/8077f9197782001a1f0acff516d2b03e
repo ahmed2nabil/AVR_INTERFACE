@@ -1,0 +1,25 @@
+/*
+ * temp_control.c
+ *
+ *  Created on: Apr 19, 2020
+ *      Author: 20114
+ */
+
+
+#include "adc.h"
+#include "lcd.h"
+
+
+
+int main (void){
+LCD_init();
+ADC_init();
+
+
+
+
+	while(1){
+
+	}
+return 0;
+}
